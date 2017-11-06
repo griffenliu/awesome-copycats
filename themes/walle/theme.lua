@@ -101,7 +101,7 @@ local separators = lain.util.separators
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local mytextclock = wibox.widget.textclock(markup("#de5e1e", "%Y-%m-%d %H:%M"))
+local mytextclock = wibox.widget.textclock("%Y-%m-%d %H:%M")
 mytextclock.font = theme.font
 
 -- Calendar
@@ -355,8 +355,8 @@ function theme.at_screen_connect(s)
             -- wibox.container.background(wibox.container.margin(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, 4, 4), "#4B3B51"),
             -- arrow("#4B3B51", "#CB755B"),
             -- wibox.container.background(wibox.container.margin(wibox.widget { fsicon, theme.fs.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#CB755B"),
-			-- arrow("#CB755B", "#8DAA9A"),
 
+			arrow("#CB755B", "#8DAA9A"),
 			wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#8DAA9A"),
             arrow("#8DAA9A", "#C0C0A2"),
             wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), "#C0C0A2"),
